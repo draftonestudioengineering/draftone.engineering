@@ -1,0 +1,85 @@
+:root{
+  --bg:#0B0B0B;
+  --ink:#EAEAEA;
+  --muted:#B5BBC5;
+  --primary:#E9B100;   /* hero heading */
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,Inter,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+/* Layout */
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+
+/* Top bar */
+.topbar{position:sticky;top:0;z-index:50;background:#000;border-bottom:1px solid #111}
+.topbar .wrap{display:flex;align-items:center;gap:16px;min-height:64px}
+.brand img{height:36px}
+.menu{display:flex;align-items:center;gap:18px;list-style:none;margin:0 0 0 auto;padding:0}
+.menu a{color:var(--ink);text-decoration:none;opacity:.9}
+.menu a:hover{opacity:1}
+.hamburger{display:none;background:transparent;border:none;color:#fff;font-size:24px;margin-left:auto}
+
+@media (max-width:900px){
+  .hamburger{display:block}
+  .menu{display:none;flex-direction:column;position:absolute;top:64px;right:10px;background:#0d0d0d;border:1px solid #222;border-radius:12px;padding:12px}
+  .menu.open{display:flex}
+}
+
+/* Banner */
+.hero-banner{width:100%;overflow:hidden;background:#000}
+.hero-banner img{
+  width:100%;
+  height:52vh;              /* adjust height */
+  object-fit:cover;
+  display:block;
+}
+
+/* Hero text under banner */
+.hero.hero-text{
+  min-height:unset;
+  background:transparent;
+  position:relative;
+  display:block;
+  padding:48px 0 36px;
+}
+.hero-content{max-width:900px;margin:0 auto;padding:0 22px}
+.hero-content h1{margin:0 0 12px 0;font-size:56px;line-height:1.1;color:var(--primary)}
+.hero-content p{margin:0 0 16px 0;color:#E6E6E6}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.btn{background:#ffffff10;color:#fff;border:1px solid #ffffff50;border-radius:12px;padding:12px 18px;text-decoration:none}
+.btn:hover{background:#ffffff20}
+.btn.ghost{background:transparent;border:1px solid #ffffff40}
+
+/* Sections */
+.section{padding:46px 0;background:#0E0E0E;border-top:1px solid #141414}
+.section:nth-of-type(even){background:#0C0C0C}
+.section h2{margin:0 0 12px 0;font-size:26px}
+.section h3{margin:18px 0 8px 0;font-size:20px}
+.cards .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#0F0F0F;border:1px solid #1b1b1b;border-radius:16px;padding:16px}
+.card h3{margin:0 0 6px 0}
+.steps{margin:8px 0 0 22px}
+
+/* Contact / Footer */
+.footer{background:#000;border-top:1px solid #111}
+.footer .wrap{padding:16px 22px}
+
+/* Floating WhatsApp */
+.whatsapp{
+  position:fixed;right:18px;bottom:18px;background:#25D366;border-radius:999px;
+  display:grid;place-items:center;width:54px;height:54px;box-shadow:0 6px 18px rgba(0,0,0,.35)
+}
+.whatsapp:hover{transform:translateY(-2px)}
+
+/* Responsive tweaks */
+@media (max-width:900px){
+  .hero-banner img{height:36vh}
+  .hero-content h1{font-size:38px}
+  .cards .grid{grid-template-columns:1fr}
+}
