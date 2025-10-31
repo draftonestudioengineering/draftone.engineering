@@ -19,7 +19,7 @@ body{
 /* Top bar */
 .topbar{position:sticky;top:0;z-index:50;background:#000;border-bottom:1px solid #111}
 .topbar .wrap{display:flex;align-items:center;gap:16px;min-height:64px}
-.brand img{height:36px}
+.brand img{height:48px}
 .menu{display:flex;align-items:center;gap:18px;list-style:none;margin:0 0 0 auto;padding:0}
 .menu a{color:var(--ink);text-decoration:none;opacity:.9}
 .menu a:hover{opacity:1}
